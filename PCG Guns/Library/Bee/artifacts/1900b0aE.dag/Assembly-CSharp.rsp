@@ -331,6 +331,7 @@
 -r:"F:/400 HP/PCG Guns/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll"
 -r:"F:/400 HP/PCG Guns/Library/PackageCache/com.unity.testtools.codecoverage@1.1.1/lib/ReportGenerator/ReportGeneratorMerged.dll"
 -r:"F:/400 HP/PCG Guns/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Sprite.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.EditorCoroutines.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Performance.Profile-Analyzer.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.ref.dll"
@@ -361,9 +362,18 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/Scripts/playerInput.cs"
+"Assets/Scripts/Weapon.cs"
 "Assets/Scripts/WeaponBody.cs"
 "Assets/Scripts/weaponManager.cs"
 "Assets/Scripts/WeaponPart.cs"
+"Assets/SUPER Character Controller/Demo Assets/Scripts/Collectable.cs"
+"Assets/SUPER Character Controller/Demo Assets/Scripts/Interactable.cs"
+"Assets/SUPER Character Controller/Demo Assets/Scripts/OminousOffice/Door.cs"
+"Assets/SUPER Character Controller/Demo Assets/Scripts/SkySweptFortress/CollectableCounter.cs"
+"Assets/SUPER Character Controller/Demo Assets/Scripts/SkySweptFortress/CollectableGem.cs"
+"Assets/SUPER Character Controller/Demo Assets/Scripts/SkySweptFortress/MovingPlatform.cs"
+"Assets/SUPER Character Controller/SUPER Character Controller/SUPERCharacterAIO.cs"
 -langversion:9.0
 
 /deterministic

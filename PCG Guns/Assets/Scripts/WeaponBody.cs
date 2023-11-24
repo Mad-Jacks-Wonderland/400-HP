@@ -11,6 +11,9 @@ public class WeaponBody : WeaponPart
     public Transform gunStockSocket;
     public Transform gunScopeSocket;
 
+    public Weapon weapon;
+
+    int rawRarity = 0;
     // Start is called before the first frame update
 
     List<WeaponPart> gunParts = new List<WeaponPart>();
@@ -24,6 +27,8 @@ public class WeaponBody : WeaponPart
         gunParts.Add(scope);
 
         CalculateStats();
+        DetermineRarity();
+        weapon.Initialize(weaponStats);
     }
 
     private void CalculateStats()
@@ -32,6 +37,9 @@ public class WeaponBody : WeaponPart
 
         foreach (WeaponPart part in gunParts)
         {
+
+            rawRarity += (int)part.rarity;
+
             foreach(KeyValuePair<PartStatType, float> stat in part.stats)
             {
                 //Debug.Log(stat.Key);
@@ -40,5 +48,15 @@ public class WeaponBody : WeaponPart
                 weaponStats.Add(stat.Key, stat.Value);
             }
         }
+    }
+
+    private void DetermineRarity()
+    {
+
+        int averageRarity = rawRarity / gunParts.Count;
+        averageRarity = Math.Clamp(averageRarity, 0, 4);
+        rarity = (RarityLevel)averageRarity;
+
+        Debug.Log(rarity);
     }
 }

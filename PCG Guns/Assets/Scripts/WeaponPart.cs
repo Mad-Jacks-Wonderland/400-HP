@@ -16,6 +16,15 @@ public class WeaponPart : MonoBehaviour
         FIRE_RATE
     }
 
+    public enum RarityLevel
+    {
+       MAKESHIFT = 0,
+       STANDARD_ISSUE = 1,
+       RARE = 2,
+       EXPERIMENTAL = 3,
+       UNIQUE = 4
+    }
+
     [System.Serializable]
     public class WeaponStatInfo
     {
@@ -30,6 +39,9 @@ public class WeaponPart : MonoBehaviour
     [SerializeField]
     public List<WeaponStatInfo> baseStats;
     public Dictionary<PartStatType, float> stats = new Dictionary<PartStatType, float>();
+
+    public RarityLevel rarity;
+    
 
     private void Awake()
     {

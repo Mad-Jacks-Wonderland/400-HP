@@ -55,6 +55,7 @@ MonoBehaviour:
   - stat: 3
     minStatValue: 0
     maxStatValue: -4
+  rarity: 1
 --- !u!1001 &2919599359164359576
 PrefabInstance:
   m_ObjectHideFlags: 0

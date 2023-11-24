@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseStats: []
+  rarity: 1
 --- !u!1001 &9036155860520544649
 PrefabInstance:
   m_ObjectHideFlags: 0
