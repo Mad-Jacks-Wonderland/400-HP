@@ -7,7 +7,7 @@ using UnityEngine;
 public class weaponManager : MonoBehaviour
 {
 
-    public List<GameObject> gunBody;
+    public List<GameObject> gunBody; // create lists of weapon parts to generate weapons with
     public List<GameObject> gunScope;
     public List<GameObject> gunMag;
     public List<GameObject> gunStock;
@@ -23,11 +23,11 @@ public class weaponManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space)) // currently generates new weapon upon pressing spacebar
             GenerateGun();
     }
 
-    private void GenerateGun()
+    private void GenerateGun() // script loops through all the parts and spawns a random part for each attachment slot
     {
         // get a random body from a list
         
@@ -52,23 +52,23 @@ public class weaponManager : MonoBehaviour
         //GameObject RandomScope = GetRandomPart(gunScope);
         //Instantiate(RandomScope, weaponBod.gunScopeSocket.position, Quaternion.identity);
 
-        weaponBod.Initialize(barrel, mag, stock, scope);
+        weaponBod.Initialize(barrel, mag, stock, scope); // weapon is then put together inside WeaponBody script
     }
 
     WeaponPart SpawnWeaponPart(List<GameObject> parts, Transform socket)
     {
 
-        GameObject randomPart = GetRandomPart(parts);
-        GameObject insPart = Instantiate(randomPart, socket.transform.position, socket.transform.rotation);
-        insPart.transform.parent = socket;
+        GameObject randomPart = GetRandomPart(parts); // get random part
+        GameObject insPart = Instantiate(randomPart, socket.transform.position, socket.transform.rotation); // create part in the game engine
+        insPart.transform.parent = socket; // put the part into its associated spot on the weapon body
 
-        return insPart.GetComponent<WeaponPart>();
+        return insPart.GetComponent<WeaponPart>(); //  send back the instanciated weapon part
     }
 
-    private GameObject GetRandomPart(List<GameObject> partList)
+    private GameObject GetRandomPart(List<GameObject> partList) // gets random part from the lists generated at the beginning, all parts are added manually, but it makes the whole system flexible with easy process of adding new parts
     {
-        int randomNum = UnityEngine.Random.Range(0, partList.Count);
+        int randomNum = UnityEngine.Random.Range(0, partList.Count); // random part is picked
 
-        return partList[randomNum];
+        return partList[randomNum]; // and then sent back to add to weapon
     }
 }

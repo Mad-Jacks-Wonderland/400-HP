@@ -6,7 +6,7 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
 
-    public float damage = 10, reload = 3, rateOfFire = 0.5f, accuracy = 0.8f, shootingRange = 2000, accuracyOffset = 0.6f;
+    public float damage = 10, reload = 3, rateOfFire = 0.5f, accuracy = 0.8f, shootingRange = 2000, accuracyOffset = 0.6f; // basic weapon stats, to be overriden later
     public int ammoCount = 15;
     public int currentAmmoCount;
     public float nextFire;
@@ -15,7 +15,7 @@ public class Weapon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Reload();
+        Reload(); // make sure the gun is reloaded at the start of its functionality
     }
 
     // Update is called once per frame
@@ -24,7 +24,7 @@ public class Weapon : MonoBehaviour
         
     }
 
-    public void Fire()
+    public void Fire() // shoots with delay depending on the fire rate attribute on the weapon base and the attachments
     {
         if (ammoCount > 0 && Time.time > nextFire)
         {
@@ -37,35 +37,35 @@ public class Weapon : MonoBehaviour
 
     }
 
-    void Shoot()
+    void Shoot() // private shoot function, called inside the fire function which can be called from outside
     {
 
-        currentAmmoCount--;
+        currentAmmoCount--; // decrease the ammo
 
-        Vector3 recoilOffset = UnityEngine.Random.insideUnitSphere * ((1 - accuracy) * accuracyOffset);
+        Vector3 recoilOffset = UnityEngine.Random.insideUnitSphere * ((1 - accuracy) * accuracyOffset); // set the offcet caused by guns base innacuracy and attachments
 
         Debug.Log("firing raycast");
         RaycastHit hit;
-        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward + recoilOffset);
+        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward + recoilOffset); // currently shoots raycasts, still thinking if i want it to shoot physical projectiles or hitscan
 
-        Debug.DrawRay(ray.origin, ray.direction * shootingRange, Color.green, 5);
+        Debug.DrawRay(ray.origin, ray.direction * shootingRange, Color.green, 5); // draws ray
 
         if(Physics.Raycast(ray, out hit, shootingRange))
         {
 
-            Debug.Log(hit.transform.name);
+            Debug.Log(hit.transform.name); // displays the name of the hit object
 
         }
     }
 
-    void Reload()
+    void Reload() // reloads the gun and sets it back to not reloading
     {
 
         currentAmmoCount = ammoCount;
         isReloading = false;
     }
 
-    public void StartReload()
+    public void StartReload() // if the gun isnt reloading, reload after the time specified by reload time attribute
     {
 
         if(!isReloading)
