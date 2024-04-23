@@ -93,7 +93,7 @@ BoxCollider:
   m_GameObject: {fileID: 4222833837985533049}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -130,7 +130,7 @@ Transform:
   m_Children:
   - {fileID: 4222833837985533046}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 7.749, y: 0, z: 0}
 --- !u!33 &4222833839307982072
 MeshFilter:
@@ -191,7 +191,7 @@ BoxCollider:
   m_GameObject: {fileID: 4222833839307982077}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}

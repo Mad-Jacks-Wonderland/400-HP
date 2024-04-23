@@ -31,7 +31,7 @@ Transform:
   m_Children:
   - {fileID: 7663385219556973343}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7799566662394711959
 MonoBehaviour:
@@ -45,7 +45,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd41e10cb61bc124a9a4d1c5b32b6658, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseStats: []
+  baseStats:
+  - stat: 1
+    minStatValue: 0.05
+    maxStatValue: 0.1
+  - stat: 3
+    minStatValue: 0.1
+    maxStatValue: 0.2
   rarity: 2
 --- !u!1001 &2997932460153994360
 PrefabInstance:
@@ -55,6 +61,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 137223384483023624}
     m_Modifications:
+    - target: {fileID: 4882777143533779943, guid: 72ae9874445539b4eb90e45d0bdcd7c4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 84f8ca6c3b6b87447907310038e398f8, type: 2}
+    - target: {fileID: 4882777143533779960, guid: 72ae9874445539b4eb90e45d0bdcd7c4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4882777144657930087, guid: 72ae9874445539b4eb90e45d0bdcd7c4, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -107,6 +121,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 50.165
       objectReference: {fileID: 0}
+    - target: {fileID: 4882777144657930105, guid: 72ae9874445539b4eb90e45d0bdcd7c4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 04a244551a30fec4f91102a7b1c9f24e, type: 2}
     - target: {fileID: 4882777144657930107, guid: 72ae9874445539b4eb90e45d0bdcd7c4, type: 3}
       propertyPath: m_Name
       value: sight 2

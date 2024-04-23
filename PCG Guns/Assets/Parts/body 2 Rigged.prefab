@@ -57,9 +57,25 @@ PrefabInstance:
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 5573148531730277511, guid: 0eb25ddb86a623047b1f24a80074d128, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.351
+      propertyPath: m_LocalPosition.x
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5573148531730277511, guid: 0eb25ddb86a623047b1f24a80074d128, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5031
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573148531730277511, guid: 0eb25ddb86a623047b1f24a80074d128, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.00000004371139
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573148531730277511, guid: 0eb25ddb86a623047b1f24a80074d128, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573148531793011424, guid: 0eb25ddb86a623047b1f24a80074d128, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b3956f37cdf75f648acb023aa097763e, type: 2}
     - target: {fileID: 5573148531793011425, guid: 0eb25ddb86a623047b1f24a80074d128, type: 3}
       propertyPath: m_IsTrigger
       value: 0
@@ -67,6 +83,14 @@ PrefabInstance:
     - target: {fileID: 5573148531793011426, guid: 0eb25ddb86a623047b1f24a80074d128, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573148531793011426, guid: 0eb25ddb86a623047b1f24a80074d128, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573148531793011426, guid: 0eb25ddb86a623047b1f24a80074d128, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.34
       objectReference: {fileID: 0}
     - target: {fileID: 5573148531793011426, guid: 0eb25ddb86a623047b1f24a80074d128, type: 3}
       propertyPath: m_LocalPosition.x
@@ -82,7 +106,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5573148531793011426, guid: 0eb25ddb86a623047b1f24a80074d128, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: -0.00000004371139
       objectReference: {fileID: 0}
     - target: {fileID: 5573148531793011426, guid: 0eb25ddb86a623047b1f24a80074d128, type: 3}
       propertyPath: m_LocalRotation.x
@@ -126,7 +150,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5573148531935934149, guid: 0eb25ddb86a623047b1f24a80074d128, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.43
+      value: -0.474
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573148531935934149, guid: 0eb25ddb86a623047b1f24a80074d128, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.00000004371139
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573148531935934149, guid: 0eb25ddb86a623047b1f24a80074d128, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5573148531935934154, guid: 0eb25ddb86a623047b1f24a80074d128, type: 3}
       propertyPath: m_Layer
@@ -171,14 +203,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  reload: 3
-  rateOfFire: 0.5
-  accuracy: 0.8
+  reload: 1.1
+  rateOfFire: 0.25
+  accuracy: 0.65
   shootingRange: 2000
-  accuracyOffset: 0.6
-  ammoCount: 15
+  accuracyOffset: 0.5
+  ammoCount: 20
   currentAmmoCount: 0
   nextFire: 0
+  isReloading: 0
+  bullet: {fileID: 0}
+  camHolder: {fileID: 0}
+  shootForce: 0
+  upwardForce: 0
+  attackPoint: {fileID: 0}
+  fpsCam: {fileID: 0}
+  lRender: {fileID: 0}
+  hits: 0
+  misses: 0
+  shotsFired: 0
+  averageDistance: 0
+  shotAccuracy: 0
+  reloads: 0
 --- !u!114 &1035208996779255902
 MonoBehaviour:
   m_ObjectHideFlags: 0

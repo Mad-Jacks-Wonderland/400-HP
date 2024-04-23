@@ -37,7 +37,7 @@ public class WeaponPart : MonoBehaviour
     }
 
     [SerializeField]
-    public List<WeaponStatInfo> baseStats;
+    public List<WeaponStatInfo> baseStats; // list of stat modifiers
     public Dictionary<PartStatType, float> stats = new Dictionary<PartStatType, float>();
 
     public RarityLevel rarity;
@@ -48,7 +48,7 @@ public class WeaponPart : MonoBehaviour
         foreach (WeaponStatInfo statInfo in baseStats) // loops through the list of stat modifiers and randomly gives the part a modifier value between assigned minimum and maximum
         {
 
-            float pickedValue = Random.Range(statInfo.minStatValue, statInfo.maxStatValue);
+            float pickedValue = Random.Range(statInfo.minStatValue, statInfo.maxStatValue); // some randomness to the stats of the part
             Debug.Log(pickedValue);
             stats.Add(statInfo.stat, pickedValue);
         }
