@@ -83,7 +83,7 @@ MonoBehaviour:
   reload: 2.5
   rateOfFire: 0.2
   accuracy: 0.6
-  shootingRange: 25
+  shootingRange: 35
   accuracyOffset: 0.11
   ammoCount: 25
   currentAmmoCount: 0

@@ -82,13 +82,13 @@ public class Weapon : MonoBehaviour
         if(Physics.Raycast(ray, out hit, shootingRange))
         {
 
-            lRender.SetPosition(0, camHolder.transform.position);
-            lRender.SetPosition(1, ray.direction * shootingRange); // render line in order to see the trajectory of a last shot
+            lRender.SetPosition(0, fpsCam.transform.position);
+            lRender.SetPosition(1, fpsCam.transform.forward * shootingRange); // render line in order to see the trajectory of a last shot
             
             //Debug.Log(hit.transform.name); // displays the name of the hit object
             Debug.Log(hit.transform.tag); // displays the name of the hit object
 
-            if(hit.transform.tag == "enemy") // if the bullet hits the enemy, add a hit and calculate the distance total and average shot distance to use in adjusted weapon generation
+            if (hit.transform.tag == "enemy") // if the bullet hits the enemy, add a hit and calculate the distance total and average shot distance to use in adjusted weapon generation
             {
 
                 hits++;
@@ -98,7 +98,13 @@ public class Weapon : MonoBehaviour
                 averageDistance = totalDistance / (/*hits / */shotsFired);
 
             }
-           
+            else
+            {
+
+                Debug.Log("missed"); // misses are also used and kept track of
+                misses++;
+            }
+
         }
         else    
         {
