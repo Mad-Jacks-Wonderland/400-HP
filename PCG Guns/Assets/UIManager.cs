@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -23,12 +24,13 @@ public class UIManager : MonoBehaviour
 
     public void UpdateWeaponStats(float damage, float reloadSpeed, float rateOfFire, float accuracy, float range, float recoil, float magSize )
     {
+        float acctext = accuracy * 100;
 
         weaponStats.text = "Current weapon Stats: " + "\n" +
             "Damage: " + damage.ToString() + "\n" +
             "Reload speed: " + reloadSpeed.ToString() + "\n" + 
             "Rate Of Fire: " + rateOfFire.ToString() + "\n" + 
-            "Accuracy: " + accuracy.ToString() + "\n" + 
+            "Accuracy: " + String.Format("{0:0.00}",acctext.ToString()) + "\n" + 
             "Range: " + range.ToString() + "\n" + 
             "Recoil: " + recoil.ToString() + "\n" + 
             "Magazine Size: " + magSize.ToString();

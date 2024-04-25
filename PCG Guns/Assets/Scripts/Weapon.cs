@@ -6,7 +6,7 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
 
-    public float damage = 10, reload = 3, rateOfFire = 0.5f, accuracy = 3.0f, shootingRange = 2000, accuracyOffset = 0.00f; // basic weapon stats, to be overriden later
+    public float damage = 10, reload = 3, rateOfFire = 0.5f, accuracy = 1.0f, shootingRange = 2000, accuracyOffset = 0.00f; // basic weapon stats, to be overriden later
     public int ammoCount = 15;
     public int currentAmmoCount;
     public float nextFire;
@@ -145,11 +145,11 @@ public class Weapon : MonoBehaviour
     void SetWeaponStats(Dictionary<WeaponPart.PartStatType, float> weaponStats) // sets the stats by adding the modifiers from the weapon parts
     {
 
-        damage = weaponStats[WeaponPart.PartStatType.DAMAGE];
-        reload = weaponStats[WeaponPart.PartStatType.RELOAD_SPEED];
-        accuracy = weaponStats[WeaponPart.PartStatType.ACCURACY];
-        ammoCount = (int)weaponStats[WeaponPart.PartStatType.AMMO_CAPACITY];
-        rateOfFire = weaponStats[WeaponPart.PartStatType.FIRE_RATE];
+        damage += weaponStats[WeaponPart.PartStatType.DAMAGE];
+        reload += weaponStats[WeaponPart.PartStatType.RELOAD_SPEED];
+        accuracy += weaponStats[WeaponPart.PartStatType.ACCURACY];
+        ammoCount += (int)weaponStats[WeaponPart.PartStatType.AMMO_CAPACITY];
+        rateOfFire += weaponStats[WeaponPart.PartStatType.FIRE_RATE];
     }
 
 

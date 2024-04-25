@@ -42,12 +42,16 @@ public class WeaponBody : WeaponPart
 
             foreach(KeyValuePair<PartStatType, float> stat in part.stats)
             {
-                //Debug.Log(stat.Key);
-                //Debug.Log(stat.Value);
 
-                weaponStats.Add(stat.Key, stat.Value); // adds modifier to list which will be sent further to generate the weapon stats
+                if (weaponStats.ContainsKey(stat.Key))
+                    weaponStats[stat.Key] += stat.Value;
+                else
+                    weaponStats.Add(stat.Key, stat.Value); // adds modifier to list which will be sent further to generate the weapon stats
             }
         }
+
+        //Debug.Log(stat.Key);
+        //Debug.Log(stat.Value);
     }
 
     private void DetermineRarity() // determines rarity based on the rarity of all the parts
