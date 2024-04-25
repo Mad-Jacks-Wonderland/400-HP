@@ -47,8 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseStats:
   - stat: 1
-    minStatValue: 0.1
-    maxStatValue: 0.2
+    minStatValue: 0.01
+    maxStatValue: 0.1
   rarity: 2
 --- !u!1001 &6050583890344499199
 PrefabInstance:

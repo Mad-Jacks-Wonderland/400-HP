@@ -145,11 +145,11 @@ public class Weapon : MonoBehaviour
     void SetWeaponStats(Dictionary<WeaponPart.PartStatType, float> weaponStats) // sets the stats by adding the modifiers from the weapon parts
     {
 
-        damage = weaponStats[WeaponPart.PartStatType.DAMAGE];
-        reload = weaponStats[WeaponPart.PartStatType.RELOAD_SPEED];
-        accuracy = weaponStats[WeaponPart.PartStatType.ACCURACY];
-        ammoCount = (int)weaponStats[WeaponPart.PartStatType.AMMO_CAPACITY];
-        rateOfFire = weaponStats[WeaponPart.PartStatType.FIRE_RATE];
+        damage = damage + weaponStats[WeaponPart.PartStatType.DAMAGE];
+        reload = reload + weaponStats[WeaponPart.PartStatType.RELOAD_SPEED];
+        accuracy = accuracy + weaponStats[WeaponPart.PartStatType.ACCURACY];
+        ammoCount = ammoCount + (int)weaponStats[WeaponPart.PartStatType.AMMO_CAPACITY];
+        rateOfFire = rateOfFire + weaponStats[WeaponPart.PartStatType.FIRE_RATE];
     }
 
 

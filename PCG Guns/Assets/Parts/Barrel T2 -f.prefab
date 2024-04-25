@@ -50,7 +50,7 @@ MonoBehaviour:
     minStatValue: 1
     maxStatValue: 4
   - stat: 1
-    minStatValue: 0.1
+    minStatValue: 0.01
     maxStatValue: 0.15
   - stat: 3
     minStatValue: 0
