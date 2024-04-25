@@ -50,11 +50,11 @@ MonoBehaviour:
     minStatValue: 1
     maxStatValue: 4
   - stat: 1
-    minStatValue: 1
-    maxStatValue: 1.5
+    minStatValue: 0.1
+    maxStatValue: 0.15
   - stat: 3
     minStatValue: 0
-    maxStatValue: -2
+    maxStatValue: -1
   rarity: 2
 --- !u!1001 &3692359188024193147
 PrefabInstance:

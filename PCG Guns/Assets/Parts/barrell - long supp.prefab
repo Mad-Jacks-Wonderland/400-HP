@@ -148,7 +148,7 @@ MonoBehaviour:
   baseStats:
   - stat: 1
     minStatValue: 0.1
-    maxStatValue: 0.6
+    maxStatValue: 0.25
   - stat: 0
     minStatValue: 1
     maxStatValue: 9

@@ -221,7 +221,7 @@ MonoBehaviour:
   damage: 30
   reload: 2.5
   rateOfFire: 0.3
-  accuracy: 0.8
+  accuracy: 0.75
   shootingRange: 30
   accuracyOffset: 0.5
   ammoCount: 40

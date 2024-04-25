@@ -51,7 +51,7 @@ MonoBehaviour:
     maxStatValue: 2.5
   - stat: 1
     minStatValue: 0.1
-    maxStatValue: 0.3
+    maxStatValue: 0.17
   - stat: 3
     minStatValue: 0
     maxStatValue: -0.3
