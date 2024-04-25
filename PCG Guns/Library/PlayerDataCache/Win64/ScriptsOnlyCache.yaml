@@ -1284,4 +1284,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: F:/400 HP/PCG Guns/PCG Guns.exe
+  playerPath: F:/400 HP/400 HP Build/PCG Guns.exe
