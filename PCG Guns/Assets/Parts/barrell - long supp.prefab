@@ -93,7 +93,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1900659908775284013}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5000001
   m_Height: 2
   m_Direction: 1
@@ -215,7 +215,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrel T2 -f
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -7626081080402476241, guid: 8076c595c38db10408a4afebf512e2ad, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8076c595c38db10408a4afebf512e2ad, type: 3}
 --- !u!4 &7402916287382287677 stripped
@@ -291,7 +292,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4751066469271833572, guid: dad424a72205b2e4581235e929624cf1, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: dad424a72205b2e4581235e929624cf1, type: 3}
 --- !u!4 &1612907930274841427 stripped
