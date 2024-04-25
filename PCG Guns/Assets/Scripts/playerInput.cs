@@ -52,8 +52,10 @@ public class playerInput : MonoBehaviour
             uiManager.UpdateGenerationData(focusedWeapon.hits, focusedWeapon.misses, focusedWeapon.shotsFired, focusedWeapon.averageDistance, focusedWeapon.shotAccuracy, focusedWeapon.reloads);
         }
 
-        if(equippedWeapon.isReloading == false)
+        if(equippedWeapon != null && equippedWeapon.isReloading == false)
+        {
             uiManager.UpdateAmmo(focusedWeapon.currentAmmoCount, focusedWeapon.ammoCount);
+        }
     }
 
     private void EquipWeapon(Weapon weaponToEquip) // equips the weapon if in proximity to it

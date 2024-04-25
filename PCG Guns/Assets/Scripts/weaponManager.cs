@@ -78,7 +78,7 @@ public class weaponManager : MonoBehaviour
             bodyChoice--;
 
             if (bodyChoice < 0)
-                bodyChoice = gunBody.Count;
+                bodyChoice = gunBody.Count - 1;
 
             uiManager.UpdateWeaponChoice(gunBody[bodyChoice].partName);
         }
@@ -87,7 +87,7 @@ public class weaponManager : MonoBehaviour
         {
             bodyChoice++;
 
-            if (bodyChoice > gunBody.Count)
+            if (bodyChoice >= gunBody.Count)
                 bodyChoice = 0;
 
             uiManager.UpdateWeaponChoice(gunBody[bodyChoice].partName);
@@ -95,12 +95,18 @@ public class weaponManager : MonoBehaviour
 
         currentWeapon = Player.GetComponent<playerInput>().GetCurrentWeapon(); // calculates the score for procedural weighted random selection of the parts later
 
-        barrelSelection = 20 * ((currentWeapon.misses /  currentWeapon.damage) / currentWeapon.accuracy);
-        scopeSelection =  ((currentWeapon.averageDistance + currentWeapon.hits) - (currentWeapon.misses * 2)) / currentWeapon.accuracy;
-        stockSelection = 10 * (currentWeapon.reloads * 2) / 1 + currentWeapon.accuracy;
-        magSelection = 0.4f * (((10 * currentWeapon.reloads) + (currentWeapon.shotsFired * 0.25f)) / currentWeapon.rateOfFire);
+        if(currentWeapon != null)
+        {
 
-        uiManager.UpdatePartScore(scopeSelection, barrelSelection, stockSelection, magSelection); // score is being updated and displayed on the UI
+            barrelSelection = 20 * (currentWeapon.misses / currentWeapon.damage / currentWeapon.accuracy);
+            scopeSelection = ((currentWeapon.averageDistance + currentWeapon.hits) - (currentWeapon.misses * 2)) / currentWeapon.accuracy;
+            stockSelection = 10 * (currentWeapon.reloads * 2) / 1 + currentWeapon.accuracy;
+            magSelection = 0.4f * (((10 * currentWeapon.reloads) + (currentWeapon.shotsFired * 0.25f)) / currentWeapon.rateOfFire);
+
+            uiManager.UpdatePartScore(scopeSelection, barrelSelection, stockSelection, magSelection); // score is being updated and displayed on the UI
+
+        }
+       
     }
 
     private void GenerateRandomGun() // script loops through all the parts and spawns a random part for each attachment slot
